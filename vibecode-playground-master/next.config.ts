@@ -4,10 +4,10 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: '*',
-        port: '',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "*",
+        port: "",
+        pathname: "/**",
       },
     ],
   },
@@ -15,15 +15,15 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: '/:path*',
+        source: "/:path*",
         headers: [
           {
-            key: 'Cross-Origin-Opener-Policy',
-            value: 'same-origin',
+            key: "Cross-Origin-Opener-Policy",
+            value: "same-origin",
           },
           {
-            key: 'Cross-Origin-Embedder-Policy',
-            value: 'require-corp',
+            key: "Cross-Origin-Embedder-Policy",
+            value: "require-corp",
           },
         ],
       },
@@ -32,12 +32,10 @@ const nextConfig: NextConfig = {
 
   reactStrictMode: false,
 
-  // 🔧 ADD THIS
   eslint: {
     ignoreDuringBuilds: true,
   },
 
-  // 🔧 ADD THIS
   typescript: {
     ignoreBuildErrors: true,
   },
